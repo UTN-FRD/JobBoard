@@ -1,0 +1,136 @@
+<h1>Crear Pasantia</h1>
+<h3>Ofrecimiento</h3>
+
+
+<%= form_for :pasantia, url: pasantia_path do |f| %>
+
+<div class="form-group">
+    <%= f.label :proyecto_en_que_se_desarrolla_el_pasante, :class => "col-sm-2 control-label"  %>
+    <div class="col-sm-10">
+        <%= f.text_field :title, :class => "form-control" %>
+    </div>
+</div>
+
+ 
+<p>
+    <%= f.label :area %><br>
+    <%= f.text_field :title %>
+</p>
+
+<p>
+    <%= f.label :capacitacion_a_Recibir %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :tareas_a_Desarrollar %><br>
+    <%= f.text_area :text %>
+  </p>
+
+  <p>
+    <%= f.label :zona_de_Trabajo %><br>
+    <%= f.text_field :title %>
+</p>
+ 
+<p>
+    <%= f.label :ART %><br>
+    <%= f.text_field :title %>
+</p>
+
+<p>
+    <%= f.label :obra_Social %><br>
+    <%= f.text_field :title %>
+</p>
+
+<p>
+    <%= f.label :duración_de_la_Pasantía %><br>
+    <%= f.text_field :title %>
+</p>
+
+<p>
+    <%= f.label :horario_de_Trabajo %><br>
+    <%= f.text_field :title %>
+</p>
+
+<p>
+    <%= f.label :asignación_Estimulo %><br>
+    <%= f.text_field :title %>
+</p>
+
+<p>
+    <%= f.label :otros_Beneficios%><br>
+    <%= f.text_field :title %>
+</p>
+
+<h3>Nivel de Estudio</h3>
+<%= check_box_tag "primero", "yes" %>
+ <%= label_tag "1º Año" %>
+
+<%= check_box_tag "segundo", "yes" %>
+ <%= label_tag "2º Año" %>
+
+<%= check_box_tag "tercero", "yes" %>
+ <%= label_tag "3º Año" %>
+
+ <%= check_box_tag "cuarto", "yes" %>
+ <%= label_tag "4º Año" %>
+
+ <%= check_box_tag "quinto", "yes" %>
+ <%= label_tag "5º Año" %>
+
+
+<h3>Especialidad</h3>
+<%= check_box_tag "electrica", "yes" %>
+ <%= label_tag "Eléctrica" %>
+
+ <%= check_box_tag "mecanica", "yes" %>
+ <%= label_tag "Mecánica" %>
+
+ <%= check_box_tag "quimica", "yes" %>
+ <%= label_tag "Química" %>
+
+ <%= check_box_tag "sistemas", "yes" %>
+ <%= label_tag "Sistemas" %>
+
+
+<p>
+    <%= f.label :Requerimiento_de_Idioma %><br>
+    <%= f.text_field :title %>
+</p>
+
+<p>
+    <%= f.label :manejo_de_Herramientas_Informáticas %><br>
+    <%= f.text_area :text %>
+</p>
+
+<p>
+    <%= f.label :nivel %><br>
+    <%= f.text_field :title %>
+</p>
+
+<p>
+    <%= f.label :conocimientos_Especificos %><br>
+    <%= f.text_area :text %>
+</p>
+
+<p>
+    <%= f.label :periodo_de_Publicación %><br>
+    <%= f.text_field :title %>
+</p>
+
+<p>
+    <%= f.label :Desde %><br>
+    <%= f.text_field :title %>
+</p>
+
+<p>
+    <%= f.label :hasta %><br>
+    <%= f.text_field :title %>
+</p>
+
+
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
