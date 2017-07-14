@@ -1,133 +1,161 @@
-<h1>Crear Pasantia</h1>
-<h2>Ofrecimiento</h2>
+<div class="container"> 
+
+    <h1>Crear Pasantia</h1>
+    <h2>Ofrecimiento</h2>
 
 
-<%= form_for :pasantia, url: pasantia_path do |f| %>
+    <%= form_for :pasantia, url: pasantia_path do |f| %>
 
-<div class="form-group">
-    <%= f.label :proyecto_en_que_se_desarrolla_el_pasante %>
-    <%= f.text_field :title, :class => "form-control" %>
+    <div class="form-group">
+        <%= f.label :proyecto_en_que_se_desarrolla_el_pasante %>
+        <%= f.text_field :title, :class => "form-control", placeholder: 'Nombre del Proyecto'%>
+    </div>
+
+        <div class="form-group">
+            <%= f.label :area %><br>
+             <%= f.text_field :text, :class => "form-control", placeholder: "Area" %> 
+        </div>
+
+        <div class="form-group">
+            <%= f.label :capacitacion_a_Recibir %><br>
+              <%= f.text_field :text, :class => "form-control", placeholder: "Capacitación" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :tareas_a_Desarrollar %><br>
+            <%= f.text_field :text, :class => "form-control", placeholder: "Tareas" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :zona_de_Trabajo %><br>
+             <%= f.text_field :text, :class => "form-control", placeholder: "Districto" %>
+        </div>
+         
+        <div class="form-group">
+            <%= f.label :ART %><br>
+             <%= f.text_field :text, :class => "form-control", placeholder: "Seguro" %>
+        </div>
+
+        <div class="form-group">
+            <%= f.label :obra_Social %><br>
+             <%= f.text_field :text, :class => "form-control", placeholder: "Obra Social" %>
+        </div>
+
+        <div class="form-group">
+            <%= f.label :duración_de_la_Pasantía %><br>
+             <%= f.text_field :text, :class => "form-control", placeholder: "Tiempo en mes" %>
+        </div>
+
+        <div class="form-group">
+            <%= f.label :horario_de_Trabajo %><br>
+             <%= f.text_field :text, :class => "form-control", placeholder: "Tiempo en Horas" %>
+        </div>
+
+        <div class="form-group">
+            <%= f.label :asignación_Estimulo %><br>
+             <%= f.text_field :text, :class => "form-control", placeholder: "Asignacion" %>
+        </div>
+
+        <div class="form-group">
+            <%= f.label :otros_Beneficios%><br>
+             <%= f.text_field :text, :class => "form-control", placeholder: "Beneficios" %>
+        </div>
+
+        <h3>Nivel de Estudio</h3>
+
+        <div class="checkbox">
+            <label>
+                <%= check_box_tag "primero", "yes" %>
+                1º Año
+            </label>
+
+            <label>
+                <%= check_box_tag "segundo", "yes" %>
+                2º Año
+            </label>
+
+            <label>
+                <%= check_box_tag "tercero", "yes" %>
+                3º Año
+            </label>
+
+            <label>
+                <%= check_box_tag "cuarto", "yes" %>
+                4º Año
+            </label>
+
+            <label>
+                <%= check_box_tag "quinto", "yes" %>
+                5º Año                
+            </label>    
+        </div>
+
+
+        <h3>Especialidad</h3>
+
+        <div class="checkbox">
+            <label>
+                <%= check_box_tag "electrica", "yes" %>
+                Eléctrica
+            </label>
+
+            <label>
+                <%= check_box_tag "mecanica", "yes" %>
+                Mecánica
+            </label>
+
+            <label>
+                <%= check_box_tag "quimica", "yes" %>
+                Química
+            </label>
+
+            <label>
+                <%= check_box_tag "sistemas", "yes" %>
+                Sistemas
+            </label>
+        </div>    
+
+
+        <div class="form-group">
+            <%= f.label :Requerimiento_de_Idioma %><br>
+             <%= f.text_field :text, :class => "form-control", placeholder: "Idiomas" %>
+        </div>
+
+        <div class="form-group">
+            <%= f.label :manejo_de_Herramientas_Informáticas %><br>
+            <%= f.text_field :text, :class => "form-control", placeholder: "Herramientas Informaticas" %>
+        </div>
+
+        <div class="form-group">
+            <%= f.label :nivel %><br>
+              <%= f.text_field :text, :class => "form-control", placeholder: "Nivel" %>
+        </div>
+
+        <div class="form-group">
+            <%= f.label :conocimientos_Especificos %><br>
+            <%= f.text_field :text, :class => "form-control", placeholder: "Conocimientos" %>
+        </div>
+
+        <div class="form-group">
+            <%= f.label :periodo_de_Publicación %><br>
+             <%= f.text_field :text, :class => "form-control", placeholder: "Tiempo en Meses" %>
+        </div>
+
+        <div class="form-group">
+            <%= f.label :Desde %><br>
+             <%= f.text_field :text, :class => "form-control", placeholder: "Especificación en Meses" %>
+        </div>
+
+        <div class="form-group">
+            <%= f.label :hasta %><br>
+             <%= f.text_field :text, :class => "form-control", placeholder: "Especificación en Meses" %>
+        </div>
+
+
+
+        <div class="form-group">
+            <%= f.submit :class=> "btn btn-default"%>
+        </div> 
+    <% end %>
+
 </div>
-
-<p>
-    <%= f.label :area %><br>
-    <%= f.text_field :title %>
-</p>
-
-<p>
-    <%= f.label :capacitacion_a_Recibir %><br>
-    <%= f.text_field :title %>
-  </p>
-
-  <p>
-    <%= f.label :tareas_a_Desarrollar %><br>
-    <%= f.text_area :text %>
-  </p>
-
-  <p>
-    <%= f.label :zona_de_Trabajo %><br>
-    <%= f.text_field :title %>
-</p>
- 
-<p>
-    <%= f.label :ART %><br>
-    <%= f.text_field :title %>
-</p>
-
-<p>
-    <%= f.label :obra_Social %><br>
-    <%= f.text_field :title %>
-</p>
-
-<p>
-    <%= f.label :duración_de_la_Pasantía %><br>
-    <%= f.text_field :title %>
-</p>
-
-<p>
-    <%= f.label :horario_de_Trabajo %><br>
-    <%= f.text_field :title %>
-</p>
-
-<p>
-    <%= f.label :asignación_Estimulo %><br>
-    <%= f.text_field :title %>
-</p>
-
-<p>
-    <%= f.label :otros_Beneficios%><br>
-    <%= f.text_field :title %>
-</p>
-
-<h3>Nivel de Estudio</h3>
-<%= check_box_tag "primero", "yes" %>
- <%= label_tag "1º Año" %>
-
-<%= check_box_tag "segundo", "yes" %>
- <%= label_tag "2º Año" %>
-
-<%= check_box_tag "tercero", "yes" %>
- <%= label_tag "3º Año" %>
-
- <%= check_box_tag "cuarto", "yes" %>
- <%= label_tag "4º Año" %>
-
- <%= check_box_tag "quinto", "yes" %>
- <%= label_tag "5º Año" %>
-
-
-<h3>Especialidad</h3>
-<%= check_box_tag "electrica", "yes" %>
- <%= label_tag "Eléctrica" %>
-
- <%= check_box_tag "mecanica", "yes" %>
- <%= label_tag "Mecánica" %>
-
- <%= check_box_tag "quimica", "yes" %>
- <%= label_tag "Química" %>
-
- <%= check_box_tag "sistemas", "yes" %>
- <%= label_tag "Sistemas" %>
-
-
-<p>
-    <%= f.label :Requerimiento_de_Idioma %><br>
-    <%= f.text_field :title %>
-</p>
-
-<p>
-    <%= f.label :manejo_de_Herramientas_Informáticas %><br>
-    <%= f.text_area :text %>
-</p>
-
-<p>
-    <%= f.label :nivel %><br>
-    <%= f.text_field :title %>
-</p>
-
-<p>
-    <%= f.label :conocimientos_Especificos %><br>
-    <%= f.text_area :text %>
-</p>
-
-<p>
-    <%= f.label :periodo_de_Publicación %><br>
-    <%= f.text_field :title %>
-</p>
-
-<p>
-    <%= f.label :Desde %><br>
-    <%= f.text_field :title %>
-</p>
-
-<p>
-    <%= f.label :hasta %><br>
-    <%= f.text_field :title %>
-</p>
-
-
-
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
