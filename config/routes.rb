@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
 resources :pasantia
+resources :busqueda
  
  root 'welcome#index'
 end
