@@ -1,0 +1,12 @@
+
+1- scaffolding
+
+C:\Sites\JobBoard>rails generate scaffold alumno nombre:string legajo:string dni:string email:string telefono:string carrera:string anio_en_curso:string fecha_registro:date ultimo_acceso:date
+
+
+2- migrar base
+rails db:migrate
+
+3- correr y probar
+
+4- subirlo a github
