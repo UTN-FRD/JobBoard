@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Detalles Oferta</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Tipo</th>
+      <th>Anio</th>
+      <th>Ubicacion</th>
+      <th>Descripcion</th>
+      <th>Requisitos</th>
+      <th>Nivel de idioma</th>
+      <th>Otros beneficios</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @detalles_oferta.each do |detalles_ofertum| %>
+      <tr>
+        <td><%= detalles_ofertum.titulo %></td>
+        <td><%= detalles_ofertum.tipo %></td>
+        <td><%= detalles_ofertum.anio %></td>
+        <td><%= detalles_ofertum.ubicacion %></td>
+        <td><%= detalles_ofertum.descripcion %></td>
+        <td><%= detalles_ofertum.requisitos %></td>
+        <td><%= detalles_ofertum.nivel_de_idioma %></td>
+        <td><%= detalles_ofertum.otros_beneficios %></td>
+        <td><%= link_to 'Show', detalles_ofertum %></td>
+        <td><%= link_to 'Edit', edit_detalles_ofertum_path(detalles_ofertum) %></td>
+        <td><%= link_to 'Destroy', detalles_ofertum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Detalles Ofertum', new_detalles_ofertum_path, :class => "btn btn-success" %>

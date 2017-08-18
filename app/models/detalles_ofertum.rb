@@ -1,0 +1,2 @@
+class DetallesOfertum < ApplicationRecord
+end

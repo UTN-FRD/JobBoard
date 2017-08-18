@@ -1,0 +1,57 @@
+<%= form_with(model: detalles_ofertum, local: true) do |form| %>
+  <% if detalles_ofertum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(detalles_ofertum.errors.count, "error") %> prohibited this detalles_ofertum from being saved:</h2>
+
+      <ul>
+      <% detalles_ofertum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titulo %>
+    <%= form.text_field :titulo, id: :detalles_ofertum_titulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo %>
+    <%= form.text_field :tipo, id: :detalles_ofertum_tipo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :anio %>
+    <%= form.text_field :anio, id: :detalles_ofertum_anio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ubicacion %>
+    <%= form.text_field :ubicacion, id: :detalles_ofertum_ubicacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_area :descripcion, id: :detalles_ofertum_descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :requisitos %>
+    <%= form.text_area :requisitos, id: :detalles_ofertum_requisitos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nivel_de_idioma %>
+    <%= form.text_field :nivel_de_idioma, id: :detalles_ofertum_nivel_de_idioma %>
+  </div>
+
+  <div class="field">
+    <%= form.label :otros_beneficios %>
+    <%= form.text_area :otros_beneficios, id: :detalles_ofertum_otros_beneficios %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

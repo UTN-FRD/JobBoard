@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @detalles_ofertum.titulo %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @detalles_ofertum.tipo %>
+</p>
+
+<p>
+  <strong>Anio:</strong>
+  <%= @detalles_ofertum.anio %>
+</p>
+
+<p>
+  <strong>Ubicacion:</strong>
+  <%= @detalles_ofertum.ubicacion %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @detalles_ofertum.descripcion %>
+</p>
+
+<p>
+  <strong>Requisitos:</strong>
+  <%= @detalles_ofertum.requisitos %>
+</p>
+
+<p>
+  <strong>Nivel de idioma:</strong>
+  <%= @detalles_ofertum.nivel_de_idioma %>
+</p>
+
+<p>
+  <strong>Otros beneficios:</strong>
+  <%= @detalles_ofertum.otros_beneficios %>
+</p>
+
+<%= link_to 'Edit', edit_detalles_ofertum_path(@detalles_ofertum) %> |
+<%= link_to 'Back', detalles_oferta_path %>

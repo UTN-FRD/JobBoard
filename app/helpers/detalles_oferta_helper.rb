@@ -1,0 +1,2 @@
+module DetallesOfertaHelper
+end

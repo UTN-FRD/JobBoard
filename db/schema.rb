@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170811203620) do
+ActiveRecord::Schema.define(version: 20170817185558) do
 
   create_table "alumnos", force: :cascade do |t|
     t.string "nombre"
@@ -22,6 +22,73 @@ ActiveRecord::Schema.define(version: 20170811203620) do
     t.string "anio_en_curso"
     t.date "fecha_registro"
     t.date "ultimo_acceso"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "datos", force: :cascade do |t|
+    t.string "nombre_de_la_empresa"
+    t.string "rubro"
+    t.string "direccion"
+    t.string "ciudad"
+    t.string "codigo_postal"
+    t.string "email"
+    t.string "cuit"
+    t.string "telefonos"
+    t.string "responsables"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "datos_de_la_empresas", force: :cascade do |t|
+    t.string "nombre_de_la_empresa"
+    t.string "rubro"
+    t.string "direccion"
+    t.string "ciudad"
+    t.string "codigo_postal"
+    t.string "email"
+    t.string "telefono"
+    t.string "responsable"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "detalles", force: :cascade do |t|
+    t.string "titulo"
+    t.string "tipo"
+    t.string "anio"
+    t.string "ubicacion"
+    t.text "descripcion"
+    t.text "requisitos"
+    t.string "nivel_de_idioma"
+    t.text "otros_beneficios"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "detalles_oferta", force: :cascade do |t|
+    t.string "titulo"
+    t.string "tipo"
+    t.string "anio"
+    t.string "ubicacion"
+    t.text "descripcion"
+    t.text "requisitos"
+    t.string "nivel_de_idioma"
+    t.text "otros_beneficios"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "empresas", force: :cascade do |t|
+    t.string "nombre_de_la_Empresa"
+    t.string "rubro"
+    t.string "direccion"
+    t.string "ciudad"
+    t.string "codigo_postal"
+    t.string "email"
+    t.string "cuit"
+    t.string "telefonos"
+    t.string "responsable"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
